@@ -3,10 +3,10 @@ A microcontroller board connected to a home network that can be controlled from 
 
 ![](nodemcu_board.jfif)
 
-#Schematics
+#<h1>Schematics</h1>
+![](schematics.png)
 
-
-#How to 
+#<h1>How to </h1>
 1. Open Arduino IDE.
 2. Go to Tools > Manage Libraries, search for esp8266 and install the library.
 3. Under Tools > Board, select your board, in this case it's NodeMCU. Make sure the port is open and connected.
