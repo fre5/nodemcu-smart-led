@@ -1,10 +1,8 @@
 # Nodemcu Smart LED
 A microcontroller board connected to a home network that can be controlled from a browser. In this demo, I'm using LED lights, but it can be used with all sorts of things (servo, relay, etc).
 
-![](nodemcu_board.jfif)
-
-<h1>Schematics</h1>
 ![](schematics.png)
+
 
 <h1>How to </h1>
 1. Open Arduino IDE.
