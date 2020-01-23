@@ -12,14 +12,12 @@ WiFiServer server(80);
 String header;
 
 // Auxiliar variables to store the current output state
-String output5State = "off";
 String output4State = "off";
 String output14State = "off";
 String output12State = "off";
 
 
 // Assign output variables to GPIO pins
-const int output5 = 5;
 const int output4 = 4;
 const int output14 = 14;
 const int output12 = 12;
@@ -34,12 +32,10 @@ const long timeoutTime = 2000;
 void setup() {
   Serial.begin(115200);
   // Initialize the output variables as outputs
-  pinMode(output5, OUTPUT);
   pinMode(output4, OUTPUT);
   pinMode(output14, OUTPUT);
   pinMode(output12, OUTPUT);
   // Set outputs to LOW
-  digitalWrite(output5, LOW);
   digitalWrite(output4, LOW);
   digitalWrite(output14, LOW);
   digitalWrite(output12, LOW);
@@ -86,15 +82,8 @@ void loop(){
             client.println();
             
             // turns the GPIOs on and off
-            if (header.indexOf("GET /5/on") >= 0) {
-              Serial.println("GPIO 5 on");
-              output5State = "on";
-              digitalWrite(output5, HIGH);
-            } else if (header.indexOf("GET /5/off") >= 0) {
-              Serial.println("GPIO 5 off");
-              output5State = "off";
-              digitalWrite(output5, LOW);
-            } else if (header.indexOf("GET /4/on") >= 0) {
+           
+            if (header.indexOf("GET /4/on") >= 0) {
               Serial.println("GPIO 4 on");
               output4State = "on";
               digitalWrite(output4, HIGH);
@@ -138,14 +127,7 @@ void loop(){
             // Web Page Heading
             client.println("<body><h1>3IOT</h1>");
             
-            // Display current state, and ON/OFF buttons for GPIO 5  
-            client.println("<p>GPIO 5 - State " + output5State + "</p>");
-            // If the output5State is off, it displays the ON button       
-            if (output5State=="off") {
-              client.println("<p><a href=\"/5/on\"><button class=\"button\">ON</button></a></p>");
-            } else {
-              client.println("<p><a href=\"/5/off\"><button class=\"button button2\">OFF</button></a></p>");
-            } 
+            
                
             // Display current state, and ON/OFF buttons for GPIO 4  
             client.println("<p>GPIO 4 - State " + output4State + "</p>");
