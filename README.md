@@ -1,5 +1,5 @@
-# Nodemcu Smart LED
-A microcontroller board connected to a home network that can be controlled from a browser. In this demo, I'm using LED lights, but it can be used with all sorts of things (servo, relay, etc). I'd like to keep it simple and not relying on third party apps, so the use of a web browser is ideal.
+# Nodemcu API reader
+A microcontroller board that connects to an access point and reads API from the web. I used LED lights as the output, but it can be used with all sorts of things (servo, relay, etc). I'd like to keep it simple and not rely on third party apps, instead I use a browser for an ideal solution.
 
 ![](schematics.png)
 
