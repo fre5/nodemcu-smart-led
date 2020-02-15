@@ -1,4 +1,4 @@
-//Enable web browser control of LEDs 
+//Nodemcu smartled toggler with integrated web server
 
 // Load Wi-Fi library
 #include <ESP8266WiFi.h>
