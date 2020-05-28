@@ -1,5 +1,5 @@
 # Nodemcu API reader
-A microcontroller board that connects to an access point and reads API from the web. I used LED lights as the output, but it can be used with all sorts of things (servo, relay, etc). I'd like to keep it simple and not rely on third party apps, instead I use a browser for an ideal solution.
+NodeMCU 0.9 (ESP-12 Module) and LED lights that can read information from the web 
 
 ![](schematics.png)
 
@@ -8,9 +8,10 @@ A microcontroller board that connects to an access point and reads API from the 
 1. Open Arduino IDE. <br>
 2. Go to Tools > Manage Libraries, search for esp8266 and install the library.  <br>
 3. Under Tools > Board, select your board, in this case it's NodeMCU. Make sure the port is open and connected.  <br>
-3. Open nodemcu_smart_led.ino in Arduino IDE. <br>
-4. Change your network credentials accordingly.  <br>
-5. Insert a json url inside http.begin("yourAPIurl"). <br>
+4. load ArduinoJson library in Arduino IDE, get it [https://github.com/bblanchon/ArduinoJson]
+5. Open nodemcu_smart_led.ino in Arduino IDE. <br>
+6. Change your network credentials accordingly.  <br>
+7. Insert a json url inside http.begin("yourAPIurl"). <br>
 
 
 
