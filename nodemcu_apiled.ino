@@ -39,19 +39,11 @@ void loop()
 
     if (httpCode > 0) 
     {
-      const size_t capacity = JSON_OBJECT_SIZE(1) + 10;
-      DynamicJsonDocument doc(capacity);
-
-      const char* json = "{\"ledstate\":1}"; // this example uses object key ledstate with a value of 1
-
-      deserializeJson(doc, json);
-
-      int ledstate = doc["ledstate"]; // 1
-
-
-
-    
-
+      DynamicJsonDocument doc(2048);
+      deserializeJson(doc, http.getStream());
+      JsonObject main = doc["key"];        // your api object key here
+      float ledstate = doc["key"]["key"]; // your api object key here
+      
       if(ledstate == 0)
       {
         digitalWrite(outputD1, HIGH);
@@ -69,12 +61,9 @@ void loop()
         digitalWrite(outputD1, LOW);
         digitalWrite(outputD2, LOW);
         digitalWrite(outputD5, HIGH);
-      }
-
+      }     
       
-              Serial.println(ledstate);
-
-
+      Serial.println(ledstate);
       
     }
     http.end(); //Close connection
