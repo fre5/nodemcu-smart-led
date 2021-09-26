@@ -1,5 +1,5 @@
 # Nodemcu API reader
-NodeMCU 0.9 (ESP-12 Module) and LED lights that can read information from the web 
+NodeMCU 0.9 (ESP-12 Module) and LED lights that can read information from Open Weather API
 
 ![](schematics.png)
 
